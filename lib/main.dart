@@ -47,9 +47,9 @@ class _MyAppState extends State<MyApp> {
             Question(
               questions[_questionIndex]["questionText"],
             ),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion)
+            ...(questions[_questionIndex]["answers"] as List<String>)
+                .map((answer) => Answer(_answerQuestion, answer))
+                .toList()
           ],
         ),
       ),
