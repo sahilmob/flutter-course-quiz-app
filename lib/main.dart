@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/question.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: <Widget>[
-            Text(
+            Question(
               questions[_questionIndex],
             ),
             RaisedButton(
